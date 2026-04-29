@@ -28,25 +28,27 @@
 </head>
 <body class="selection:bg-cyan-500/30">
     <div class="cloud-bg"></div>
+    
+    <!-- Navigation: Responsive padding and centered text on mobile -->
     <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-sm font-medium tracking-widest text-slate-500 uppercase">Portfolio</div>
-            <div class="flex gap-8 text-sm font-medium text-slate-400">
+            <div class="text-xs md:text-sm font-medium tracking-widest text-slate-500 uppercase">Portfolio</div>
+            <div class="flex gap-4 md:gap-8 text-xs md:text-sm font-medium text-slate-400">
                 <a href="index.html" class="text-cyan-400">Home</a>
                 <a href="skills.html" class="nav-link">Skills</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="contact.html" class="px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-500 transition">Hire Me</a>
+                <a href="experience.html" class="nav-link">Exp</a>
+                <a href="contact.html" class="px-3 py-1 md:px-4 md:py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-500 transition">Hire Me</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION: Split Layout -->
-    <section class="pt-40 pb-20 px-6 relative z-10">
+    <!-- HERO SECTION: Adaptive Layout -->
+    <section class="pt-24 md:pt-40 pb-20 px-6 relative z-10">
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             
-            <!-- LEFT SIDE: Text & Action -->
-            <div class="text-left space-y-8">
-                <div class="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 rounded-full">
+            <!-- LEFT SIDE: Text & Action (Centered on Mobile, Left on Desktop) -->
+            <div class="text-center lg:text-left space-y-8 order-2 lg:order-1">
+                <div class="inline-flex items-center justify-center gap-2 px-3 py-1 text-xs font-medium text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 rounded-full">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
@@ -54,34 +56,34 @@
                     Available for Internships
                 </div>
                 
-                <h1 class="text-6xl font-extrabold tracking-tight leading-tight">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
                     Chandragiri <span class="text-cyan-400">Lokesh</span>
                 </h1>
                 
-                <p class="text-xl text-slate-300 leading-relaxed max-w-lg">
+                <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
                     Cloud Infrastructure Engineer specializing in <span class="text-white font-semibold">AWS automation</span> and <span class="text-white font-semibold">Infrastructure as Code</span>.
                 </p>
                 
-                <!-- ONLY RESUME BUTTON NOW -->
-                <div class="flex items-start">
-                    <a href="resume.pdf" download="Chandragiri_Lokesh_Resume.pdf" class="resume-glow flex items-center gap-3 px-10 py-4 bg-cyan-500 text-slate-950 font-extrabold rounded-2xl hover:bg-cyan-400 transition-all transform hover:scale-105 text-lg">
+                <!-- RESUME BUTTON: Centered on Mobile -->
+                <div class="flex justify-center lg:justify-start">
+                    <a href="resume.pdf" download="Chandragiri_Lokesh_Resume.pdf" class="resume-glow flex items-center gap-3 px-8 py-4 md:px-10 md:py-4 bg-cyan-500 text-slate-950 font-extrabold rounded-2xl hover:bg-cyan-400 transition-all transform hover:scale-105 text-base md:text-lg">
                         <i data-lucide="file-text" class="w-6 h-6"></i>
                         Download Resume PDF
                     </a>
                 </div>
             </div>
 
-            <!-- RIGHT SIDE: Profile Image -->
-            <div class="flex justify-center lg:justify-end items-center">
+            <!-- RIGHT SIDE: Profile Image (Centered on Mobile) -->
+            <div class="flex justify-center items-center order-1 lg:order-2">
                 <div class="relative">
                     <div class="absolute inset-0 rounded-full bg-cyan-500 blur-3xl opacity-30 animate-pulse"></div>
-                    <img src="profile.jpg" alt="Chandragiri Lokesh" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-cyan-500 p-1 shadow-2xl">
+                    <img src="profile.jpg" alt="Chandragiri Lokesh" class="relative w-48 h-48 md:w-80 md:h-80 rounded-full object-cover border-4 border-cyan-500 p-1 shadow-2xl">
                 </div>
             </div>
         </div>
 
-        <!-- NAVIGATION CARDS -->
-        <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
+        <!-- NAVIGATION CARDS: Fully Responsive Grid -->
+        <div class="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
             <a href="skills.html" class="glass-card p-8 rounded-3xl group text-center">
                 <i data-lucide="cpu" class="w-10 h-10 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition"></i>
                 <h3 class="text-xl font-bold mb-2">Technical Skills</h3>
@@ -92,7 +94,7 @@
                 <h3 class="text-xl font-bold mb-2">Experience</h3>
                 <p class="text-slate-400 text-sm">Case studies on infrastructure automation.</p>
             </a>
-            <a href="contact.html" class="glass-card p-8 rounded-3xl group text-center">
+            <a href="contact.html" class="glass-card p-8 rounded-3xl group text-center sm:col-span-2 md:col-span-1">
                 <i data-lucide="mail" class="w-10 h-10 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition"></i>
                 <h3 class="text-xl font-bold mb-2">Get In Touch</h3>
                 <p class="text-slate-400 text-sm">Open for internships and collaboration.</p>
