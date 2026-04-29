@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me | Lokesh Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; overflow-x: hidden; }
+        .cloud-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('bg-cloud.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        .nav-link { transition: all 0.3s ease; position: relative; }
+        .nav-link:hover { color: #0ea5e9; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background: #0ea5e9; transition: 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;
+        }
+        .glass-card:hover { border-color: #0ea5e9; background: rgba(15, 23, 42, 0.9); transform: translateY(-5px); }
+    </style>
+</head>
+<body class="selection:bg-cyan-500/30">
+    <div class="cloud-bg"></div>
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-sm font-medium tracking-widest text-slate-500 uppercase">Portfolio</div>
+            <div class="flex gap-8 text-sm font-medium text-slate-400">
+                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="skills.html" class="hover:text-cyan-400 transition">Skills</a>
+                <a href="experience.html" class="hover:text-cyan-400 transition">Experience</a>
+                <a href="contact.html" class="text-cyan-400">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+    <section class="pt-32 pb-20 px-6 flex flex-col items-center justify-center text-center relative z-10">
+        <div class="max-w-2xl w-full glass-card p-12 rounded-3xl shadow-2xl">
+            <h1 class="text-4xl font-extrabold mb-4">Let's <span class="text-cyan-400">Connect</span></h1>
+            <p class="text-slate-400 mb-10">I am currently looking for an entry-level Cloud Engineer or DevOps Internship to apply my AWS infrastructure skills in a production environment.</p>
+            <div class="space-y-6 mb-12">
+                <a href="mailto:c.lokesh5054@gmail.com" class="flex items-center gap-4 p-4 bg-slate-800/50 rounded-2xl hover:bg-slate-700 transition text-left border border-slate-700">
+                    <i data-lucide="mail" class="text-cyan-400"></i>
+                    <span class="text-slate-300 font-medium">c.lokesh5054@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/chandragiri-lokesh-8b18a82b7" target="_blank" class="flex items-center gap-4 p-4 bg-slate-800/50 rounded-2xl hover:bg-slate-700 transition text-left border border-slate-700">
+                    <i data-lucide="linkedin" class="text-cyan-400"></i>
+                    <span class="text-slate-300 font-medium">LinkedIn Profile</span>
+                </a>
+            </div>
+            <div class="text-slate-500 text-sm italic">
+                Want to see my credentials? <a href="index.html" class="text-cyan-400 underline">Download Resume on Home page</a>.
+            </div>
+        </div>
+    </section>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
